@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* TYPOGRAPHY */
+  --FF: "League Spartan", sans-serif;
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #fff;
+  background-image: url("./images/bg-pattern-top-mobile.svg"),
+    url("./images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* || CTA */
+.section__cta {
+  margin: 82px 24px 49px 24px;
+}
+
+.cta__title-text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  margin-bottom: 39px;
+}
+
+.title-text__title {
+  font: bold 40px/32px var(--FF);
+  letter-spacing: -1.43px;
+  color: #512051;
+  width: 327px;
+  height: 102px;
+}
+
+.title-text__text {
+  font: 500 19px/25px var(--FF);
+  letter-spacing: -0.63px;
+  color: #927b91;
+  width: 327px;
+  height: 100px;
+}
+
+/* || CTA-REVIEWS */
+.cta__reviews {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.reviews__card {
+  background-color: #f7f2f7;
+  width: 328px;
+  height: 78px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15.23px;
+  border-radius: 8px;
+}
+
+.reviews__text {
+  font: bold 17px var(--FF);
+  color: #512051;
+}
+
+.review-rating::before {
+  content: "";
+  display: inline-block;
+  width: calc(5 * 17px + 4 * 9px);
+  height: 16px;
+  background-image: url("./images/icon-star.svg"), url("./images/icon-star.svg"),
+    url("./images/icon-star.svg"), url("./images/icon-star.svg"),
+    url("./images/icon-star.svg");
+  background-position: 0 0, 25px 0, 50px 0, 75px 0, 100px 0;
+  background-repeat: no-repeat;
+}
+
+/* || TESTIMONIALS */
+.section__testimony {
+  margin: 0 24px 99px 24px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.testimony__card {
+  width: 327px;
+  height: 248px;
+  border-radius: 8px;
+  padding: 40px 32px 35px 32px;
+  background-color: #512051;
+}
+
+.testimony__avatar {
+  display: flex;
+  flex-flow: row;
+  gap: 23px;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.testimony__avatar img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.name {
+  font: bold 17px var(--FF);
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.verify {
+  font: normal 17px var(--FF);
+  color: #ee69a4;
+}
+
+.card__text {
+  font: 500 17px/22px var(--FF);
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+/* Desktop */
+@media screen and (min-width: 720px) {
+  body {
+    background-image: url("./images/bg-pattern-top-desktop.svg"),
+      url("./images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 584px 362px, 1085px 673px;
+  }
+
+  /* || CTA */
+  .section__cta {
+    margin: 118px 165px 71px 165px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .cta__title-text {
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 17px;
+    margin-bottom: 39px;
+    margin-right: 180px;
+  }
+
+  .title-text__title {
+    font: bold 56px/48px var(--FF);
+    letter-spacing: -2px;
+    width: 445px;
+    height: 154px;
+    text-align: left;
+  }
+
+  .title-text__text {
+    width: 445px;
+    height: 75px;
+    text-align: left;
+  }
+
+  /* || CTA-REVIEWS */
+  .reviews__card {
+    width: 445px;
+    height: 56px;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32.45px;
+    border-radius: 8px;
+  }
+
+  .general {
+    margin-right: 95px;
+  }
+
+  .report-guru {
+    margin-right: 47px;
+  }
+
+  /* || TESTIMONIALS */
+  .section__testimony {
+    margin: 0 165px 100px 100px;
+    flex-flow: row;
+    gap: 30px;
+  }
+
+  .testimony__card {
+    width: 350px;
+    height: 234px;
+  }
+
+  .testimony__avatar {
+    margin-bottom: 31px;
+  }
+
+  .card__text {
+    width: 286px;
+    height: 88px;
+  }
+
+  .card-2 {
+    margin-top: 16px;
+  }
+
+  .card-3 {
+    margin-top: 32px;
+  }
+}
